@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Leave Management System</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content profile-modal-content">
+
+            <i class="fas fa-user-circle profile-icon"></i>
+
+            <h2>Create Your Student Profile</h2>
+            <p>Welcome! Please fill out your profile to continue.</p>
+            
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="profile-name">Full Name</label>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="profile-name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-urn">URN</label>
+                    <div class="input-group">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" id="profile-urn" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-dob">Date of Birth</label>
+                    <div class="input-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="date" id="profile-dob" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-year">Academic Year</label>
+                    <div class="input-group">
+                        <i class="fas fa-graduation-cap"></i>
+                        <select id="profile-year" required>
+                            <option value="">Select Year</option>
+                            <option value="FY">First Year (FY)</option>
+                            <option value="SY">Second Year (SY)</option>
+                            <option value="TY">Third Year (TY)</option>
+                            <option value="LY">Last Year (LY)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-division">Division</label>
+                    <div class="input-group">
+                        <i class="fas fa-users"></i>
+                        <input type="text" id="profile-division" placeholder="e.g., A, B, Core" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-contact">Your Contact No.</label>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="profile-contact" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-parent-contact">Parent's Contact No.</label>
+                    <div class="input-group">
+                        <i class="fas fa-mobile-alt"></i>
+                        <input type="tel" id="profile-parent-contact" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-abc-id">ABC ID</label>
+                    <div class="input-group">
+                        <i class="fas fa-hashtag"></i>
+                        <input type="text" id="profile-abc-id" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="profile-pic">Profile Picture</label>
+                    <div class="input-group">
+                        <i class="fas fa-image"></i>
+                        <input type="file" id="profile-pic" accept="image/*">
+                    </div>
+                </div>
+                <button type="submit" class="btn submit-btn">Save Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Medical Certificate Preview</h3>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <div class="container" id="app-container" style="display: none;">
+        <header>
+            <h1 id="app-title">Student Leave Management System</h1>
+            <button id="logoutBtn" class="btn export-btn">Logout</button>
+        </header>
+
+        <nav id="app-nav" class="tabs"></nav>
+        <main id="app-main" class="portal-content active"></main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
